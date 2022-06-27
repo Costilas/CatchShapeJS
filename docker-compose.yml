@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: nginx/Dockerfile
+    volumes:
+      - ./app:/var/www/html/app
+    ports:
+      - "8090:80"
+
+  php-fpm:
+    build:
+      context: ./
+      dockerfile: php-fpm/Dockerfile
+    environment:
+      PHP_IDE_CONFIG: serverName=Test
+    volumes:
+      - ./app:/var/www/html/app
+
+  adminer:
+    image: adminer
+    ports:
+      - "8095:8080"

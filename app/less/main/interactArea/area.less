@@ -1,0 +1,82 @@
+.app {
+  margin: 0 auto;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: whitesmoke;
+  border-radius: 15px;
+  text-align: center;
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+
+  #progressLine, #resultLine {
+    display: none;
+  }
+
+  .game_window {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 5px;
+    background: lightblue;
+
+    #added_shape {
+      position: absolute;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .red {
+      background: darkred;
+    }
+
+    .green {
+      background: darkgreen;
+    }
+
+    .yellow {
+      background: yellow;
+    }
+
+    .blue {
+      background: cornflowerblue;
+    }
+
+    .circle {
+        border-radius: 50%;
+    }
+
+  }
+  .app_footer {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > .btn {
+      margin: 10px auto;
+    }
+
+    .time_limit_input {
+      width: 50px;
+    }
+
+    .btn {
+      font-family: "Fira Code", sans-serif;
+      font-size: 1.5rem;
+      background: aquamarine;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+
+}
