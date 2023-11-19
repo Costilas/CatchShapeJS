@@ -1,25 +1,12 @@
 version: "3.7"
 
 services:
-  nginx:
+  nodejs:
     build:
       context: ./
-      dockerfile: nginx/Dockerfile
+      dockerfile: node/Dockerfile
     volumes:
-      - ./app:/var/www/html/app
+      - ./app:/var/www/html/
     ports:
-      - "8090:80"
-
-  php-fpm:
-    build:
-      context: ./
-      dockerfile: php-fpm/Dockerfile
-    environment:
-      PHP_IDE_CONFIG: serverName=Test
-    volumes:
-      - ./app:/var/www/html/app
-
-  adminer:
-    image: adminer
-    ports:
-      - "8095:8080"
+      - "8080:8080"
+      - "9229:9229"

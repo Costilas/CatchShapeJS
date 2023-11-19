@@ -1,0 +1,12 @@
+{
+  "name": "jsgames",
+  "version": "1.0.0",
+  "author": "test@mail.com",
+  "scripts": {
+      "serve": "node server.js",
+      "debug": "node inspect server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

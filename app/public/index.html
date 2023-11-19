@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Games</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+    <body>
+
+    <div class="wrapper">
+        <div id="app" class="app">
+            <h1>Catch Shape v.1</h1>
+            <div class="app_header">
+                <h2 id="resultLine">Score: <span id="resultValue"></span></h2>
+                <h3 id="progressLine">Time remains: <span id="time_remains"></span> seconds.</h3>
+            </div>
+            <audio id="currentMusic" src="audio/main_menu.ogg" autoplay></audio>
+            <div>
+                <button id="musicMute">Mute music</button>
+            </div>
+            <div class="app_content">
+                <div id="interact_area" class="game_window"></div>
+            </div>
+            <div class="app_footer">
+                <label for="settings">Time settings(sec.):</label>
+                <input class="time_limit_input" id="settings" type="number" min="5" value="5">
+                <button id="start_game" class="btn">Start</button>
+            </div>
+            <div>
+                Music source: <a href="https://patrickdearteaga.com/royalty-free-music/">https://patrickdearteaga.com/royalty-free-music/</a>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="js/main.js"></script>
+    </body>
+</html>
+
+
