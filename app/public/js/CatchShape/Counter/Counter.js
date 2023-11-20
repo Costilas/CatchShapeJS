@@ -4,25 +4,16 @@ export default class Counter {
     count = 0;
 
     increaseScore () {
-        this.count = this.count + 1;
+        this.count += 1;
     }
 
-    hideScore() {
-        this.#resetScore();
-        this.scoreSection.style.display = 'none';
+    resetScore() {
+        this.count = 0;
+        this.scoreBlock.textContent = '' + this.count;
     }
 
     showScore() {
         this.scoreSection.style.display = 'block';
-        console.log(this.scoreSection);
-        this.scoreBlock.textContent = this.#getScore();
-    }
-
-    #getScore() {
-        return this.count;
-    }
-
-    #resetScore() {
-        this.count = 0;
+        this.scoreBlock.textContent = '' + this.count;
     }
 }

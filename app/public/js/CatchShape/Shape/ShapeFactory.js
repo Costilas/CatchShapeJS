@@ -3,6 +3,8 @@ import Shape from "./Shape.js";
 export default class ShapeFactory {
     #shapes = ['square', 'circle'];
     #color = ['red', 'green', 'yellow', 'blue'];
+    #minSize = 30;
+    #maxSize = 160;
 
     createRandomShape() {
         return new Shape(this.#randomizeForm(), this.#randomizeColor(), this.#randomizeSize());
@@ -17,6 +19,6 @@ export default class ShapeFactory {
     }
 
     #randomizeSize() {
-        return Math.floor(Math.random() * 200);
+        return Math.floor(Math.random() * (this.#maxSize - this.#minSize + 1)) + this.#minSize;
     }
 }
